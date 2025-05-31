@@ -12,8 +12,8 @@ public:
         for (int i = 0; i < 5; i++) {
             vector<char> row;
             for (int j = 1; j <= 20; j++) {
-                if (j <= 9) row.push_back('0' + j);       // '1' to '9'
-                else row.push_back('A' + (j - 10));        // 'A' = 10, ..., 'K' = 20
+                if (j <= 9) row.push_back('0' + j);       
+                else row.push_back('A' + (j - 10));       
             }
             seats.push_back(row);
         }
