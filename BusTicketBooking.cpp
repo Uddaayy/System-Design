@@ -1,10 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 class Bus {
 private:
-    vector<vector<char>> seats;  // 'E' for empty, 'M' for male, 'F' for female
-
+    vector<vector<char>> seats; 
 public:
     Bus() {
         seats = vector<vector<char>>(20, vector<char>(4, 'E'));
