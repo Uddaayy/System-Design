@@ -15,13 +15,11 @@ public:
             return false;
         return true;
     }
-
     void seatformale(int row, int col) {
         if (!isValid(row, col)) {
             cout << "Invalid or already booked seat!" << endl;
             return;
         }
-
         if ((col > 0 && seats[row][col - 1] == 'F') ||
             (col < 3 && seats[row][col + 1] == 'F')) {
             cout << "Sorry!! It is restricted (Female adjacent)" << endl;
@@ -30,7 +28,6 @@ public:
             cout << "Hurray!! Your seat has been booked (Male)" << endl;
         }
     }
-
     void seatforfemale(int row, int col) {
         if (!isValid(row, col)) {
             cout << "Invalid or already booked seat!" << endl;
