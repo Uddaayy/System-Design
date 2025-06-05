@@ -7,7 +7,6 @@ public:
     Bus() {
         seats = vector<vector<char>>(20, vector<char>(4, 'E'));
     }
-
     bool isValid(int row, int col) {
         if (row < 0 || row >= 20 || col < 0 || col >= 4)
             return false;
