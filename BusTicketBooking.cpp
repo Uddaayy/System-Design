@@ -33,7 +33,6 @@ public:
             cout << "Invalid or already booked seat!" << endl;
             return;
         }
-
         if ((col > 0 && seats[row][col - 1] == 'M') ||
             (col < 3 && seats[row][col + 1] == 'M')) {
             cout << "Sorry!! It is restricted (Male adjacent)" << endl;
@@ -42,7 +41,6 @@ public:
             cout << "Hurray!! Your seat has been booked (Female)" << endl;
         }
     }
-
     void displaySeats() {
         cout << "\nSeat Layout:\n";
         for (int i = 0; i < 20; i++) {
@@ -54,7 +52,6 @@ public:
         }
     }
 };
-
 int main() {
     Bus b;
     while (true) {
