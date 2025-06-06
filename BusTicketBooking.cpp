@@ -57,7 +57,6 @@ int main() {
         string gen;
         cout << "\nEnter gender (M/F), or 'e' to exit, or 'd' to display seats: ";
         cin >> gen;
-
         if (gen == "e") {
             cout << "Thank you!! Visit Again" << endl;
             break;

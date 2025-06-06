@@ -5,7 +5,6 @@ using namespace std;
 class Parking {
 private:
     vector<vector<string>> slots;
-
 public:
     Parking() {
         slots = vector<vector<string>>(3, vector<string>(10, "Empty"));
@@ -39,7 +38,6 @@ public:
             cout << "Slot already occupied.\n";
         }
     }
-
     void unparkVehicle(int wheels, int col) {
         int row = getRow(wheels);
         if (row == -1 || col < 0 || col >= 10) {
@@ -62,7 +60,6 @@ public:
         return -1;
     }
 };
-
 void showMenu() {
     cout << "\n==== Parking System ====\n";
     cout << "1. Show Available Slots\n";

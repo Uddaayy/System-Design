@@ -6,30 +6,25 @@ class Book {
 public:
     string id, name, author;
     bool isIssued;
-
     Book(string id, string name, string author) {
         this->id = id;
         this->name = name;
         this->author = author;
         this->isIssued = false;
     }
-
     void display() {
         cout << "ID: " << id << ", Title: " << name
              << ", Author: " << author
              << ", Status: " << (isIssued ? "Issued" : "Available") << endl;
     }
 };
-
 class Library {
 private:
     vector<Book> books;
-
 public:
     void addBook(const Book& book) {
         books.push_back(book);
     }
-
     void showBooks() {
         if (books.empty()) {
             cout << "The library is empty." << endl;
