@@ -6,7 +6,6 @@ class Theatre {
 private:
     vector<vector<char>> seats;
     int emptySeats;
-
 public:
     Theatre() {
         for (int i = 0; i < 5; i++) {
