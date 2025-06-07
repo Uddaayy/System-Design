@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-class Bus {
+class Bus{
 private:
     vector<vector<char>> seats; 
 public:

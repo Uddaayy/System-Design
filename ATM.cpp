@@ -1,28 +1,23 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-
 class Account {
 public:
     int accountNumber;
     string name;
     double balance;
-
     Account(int accNo, string accName, double initialDeposit) {
         accountNumber = accNo;
         name = accName;
         balance = initialDeposit;
     }
-
     void display() {
         cout << "Account No: " << accountNumber << ", Name: " << name << ", Balance: ₹" << balance << endl;
     }
 };
-
 class ATM {
 private:
     vector<Account> accounts;
-
     Account* findAccount(int accNo) {
         for (auto &acc : accounts) {
             if (acc.accountNumber == accNo)
@@ -30,7 +25,6 @@ private:
         }
         return nullptr;
     }
-
 public:
     void createAccount() {
         int accNo;
@@ -53,7 +47,6 @@ public:
         accounts.push_back(Account(accNo, name, deposit));
         cout << "Account created successfully!\n";
     }
-
     void depositMoney() {
         int accNo;
         double amount;
@@ -106,7 +99,6 @@ public:
         cout << "Your current balance is: ₹" << acc->balance << endl;
     }
 };
-
 void showMenu() {
     cout << "\n==== ATM Menu ====\n";
     cout << "1. Create Account\n";
@@ -116,7 +108,6 @@ void showMenu() {
     cout << "5. Exit\n";
     cout << "Enter your choice: ";
 }
-
 int main() {
     ATM atm;
     while (true) {
