@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-
 class Theatre {
 private:
     vector<vector<char>> seats;
@@ -18,7 +17,6 @@ public:
         }
         emptySeats = 100;
     }
-
     void displayTickets() {
         cout << "\n     ";
         for (int j = 1; j <= 20; j++) {
@@ -26,7 +24,6 @@ public:
             else cout << (char)('A' + (j - 10)) << "  ";
         }
         cout << "\n";
-
         for (int i = 0; i < 5; i++) {
             cout << "Row " << i << " ";
             for (int j = 0; j < 20; j++) {
@@ -35,13 +32,11 @@ public:
             cout << endl;
         }
     }
-
     void bookTickets(int tickets) {
         if (emptySeats < tickets) {
             cout << "Sorry! Not enough seats available.\n";
             return;
         }
-
         for (int i = 0; i < tickets; i++) {
             int row, col;
             cout << "Enter the row (0–4): ";
@@ -49,19 +44,16 @@ public:
             cout << "Enter the seat number (1–20): ";
             cin >> col;
             col -= 1;  // Convert to 0-based index
-
             if (!isValid(row, col)) {
                 cout << "Invalid seat. Try again.\n";
                 i--;
                 continue;
             }
-
             if (seats[row][col] == 'X') {
                 cout << "Seat already booked. Choose another.\n";
                 i--;
                 continue;
             }
-
             seats[row][col] = 'X';
             emptySeats--;
             cout << "Seat booked successfully.\n";
