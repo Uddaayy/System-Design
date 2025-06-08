@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-
 class Book {
 public:
     string id, name, author;
@@ -34,7 +33,6 @@ public:
             }
         }
     }
-
     void issueBook(string id) {
         for (auto &book : books) {
             if (book.id == id) {
